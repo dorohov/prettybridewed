@@ -1,0 +1,127 @@
+.index-page-header{
+	position: relative;
+	overflow: hidden;	
+	//background-color: @white10;
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: cover;
+	@media @media-screen {background-position: ~"calc(100% + 100px)" top;}
+}
+.index-header__{
+	&container{
+		position: relative;
+		z-index: 1;
+		@media @media-size-xs {
+			z-index: 3;
+			position: relative;
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+		@media @media-size-sm {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+		@media @media-size-md{
+			min-height: ~"calc(100vh - @{navbar-top-md})";			
+		}
+		@media @media-screen-lg{		
+			min-height: 100vh;
+			padding-top: @navbar-top-screen;
+		}
+		@media @media-size-lg{
+			min-height: 100vh;
+			padding-top: @navbar-top-lg;		
+		}
+		@media @media-size-xxl{	
+			padding-top: @navbar-top-screen-xxl;
+		}
+	}
+	&preview{
+		z-index: 2;
+		position: absolute;
+
+		@media @media-size-xs {
+			bottom: 0;
+			right: 0;	
+			opacity: .2;		
+		}
+		@media @media-size-xs-p {
+			width: 245px;
+			height: 220px;
+			transform: translateX(40%);
+		}
+		@media @media-size-xs-l {
+			width: 205px;
+			height: 180px;
+		}
+		@media @media-notsmart {
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);			
+		}
+		@media @media-size-sm {
+			max-width: 185px;
+			max-height: 160px;
+			width: 24.8vw;
+			height: 21vw;			
+		}
+		@media @media-screen {
+			max-width: 885px;
+			max-height: 760px;
+			width: 47.8vw;
+			height: 41vw;			
+		}
+		@media @media-size-md {
+			width: 42.8vw;
+			height: 36vw;
+		}
+	}
+	&inner{
+		@media @media-screen {
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			width: 100%;
+			left: 50%;
+			transition: @trs-site;
+		}
+	}
+	&heading{
+		font-family: @b-ff-2;
+		margin-bottom: 25px;
+		@media @media-size-xs {
+			margin-bottom: 35px;
+			//text-align: center;	
+			br{display: none;}		
+		}
+		.calcFontSize(24, 130, 320, 1680);
+		.calcLineHeight(30, 120, 320, 1680);	
+		
+	}
+	&row{
+		align-items: flex-end;
+		@media @media-size-xxl {
+			margin-left: -25px;
+			margin-right: -25px;
+		}
+	}
+	&cols{
+		@media @media-size-xxl {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+		&.is--btn{
+			margin-bottom: 25px;
+		}
+		&.is--heading{
+			font-family: @bikham;
+			.calcFontSize(40, 100, 320, 1680);
+			.calcLineHeight(50, 100, 320, 1680);
+			@media @media-size-xs {
+				order: -1;
+				.makeCols(12, 12);
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
