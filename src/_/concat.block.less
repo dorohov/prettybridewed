@@ -1285,14 +1285,14 @@ textarea.form__control{height: 150px;}
 }
 .navbar-site{
 	color: @navbar-color; 
+	padding-top: 20px;
+	padding-bottom: 20px; 
 	@media @media-device{
 		position: fixed;
 		width: 100%;
 		z-index: 100;
 		top: 0;
-		left: 0; 
-		padding-top: 20px;
-		padding-bottom: 20px; 		
+		left: 0; 		
 		background: @navbar-bg-device;	
 	} 
 	@media @media-screen {
@@ -1300,9 +1300,10 @@ textarea.form__control{height: 150px;}
 		top: 0px;
 		left: 0px;
 		width: 100%;
-		padding-top: 40px;
-		padding-bottom: 40px;
+		//padding-top: 40px;
+		//padding-bottom: 40px;
 		z-index: 100;
+		background-color: @white;
 		&.opacity{
 			opacity: 0;
 			transform: translateY(-100%);
