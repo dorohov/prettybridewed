@@ -1,0 +1,61 @@
+<div class="{{catalog_prefix}}block">
+	<div class="row {{catalog_prefix}}row is--wrap  is--gutter">
+		<div class="cols {{catalog_prefix}}cols  is--preview  is--hidden-device">
+			<a class="{{catalog_prefix}}preview" href="{{url-path-img}}/temp/catalog-item1-xl.jpg" data-fancybox="catalog-preview">
+				<img src="{{url-path-img}}/temp/catalog-item1-lg.jpg" alt="">
+			</a>
+		</div>		
+		<div class="cols {{catalog_prefix}}cols  is--note">	
+			<div class="row {{catalog_prefix}}note-row is--wrap ">
+				<div class="cols {{catalog_prefix}}note-cols  is--top">	
+					[[azbntple 
+						tpl="/src/block/site/default/page-header/heading-icon.html" 
+						header_prefix="page-header__" 
+						header_mod="is--icon"
+						header_level="h1"
+						header="Модель: Alisha"
+						header_icon_left="heading-icon-left"
+						header_icon_right="heading-icon-right"
+					]]	
+					<div class="{{catalog_prefix}}char-list">
+						[[azbntple 
+							tpl="/src/block/site/default/catalog/item-char.html" 
+							catalog_prefix="catalog-item__"
+							catalog_name="Размеры:"
+							catalog_value="40-52"
+						]]	
+						[[azbntple 
+							tpl="/src/block/site/default/catalog/item-char.html" 
+							catalog_prefix="catalog-item__"
+							catalog_name="Цвет:"
+							catalog_value="Айвори"
+						]]	
+						[[azbntple 
+							tpl="/src/block/site/default/catalog/item-char.html" 
+							catalog_prefix="catalog-item__"
+							catalog_name="Ткань:"
+							catalog_value="Расшитое кружево, фатин, атлас"
+						]]	
+					</div>
+					<div class="{{catalog_prefix}}btn">
+						[[azbntple 
+							tpl="/src/block/site/default/button/button-modal.html"
+							button_prefix="btn__" 
+							button_mod="  "
+							button_target="modal-order"
+							button_name="Заказать"
+						]]
+					</div>
+
+				</div>
+				<div class="cols {{catalog_prefix}}note-cols  is--bottom">
+					[[azbntple 
+						tpl="/src/block/site/default/gallery/block.html" 
+						gallery_prefix="gallery-panel__"
+						gallery_mod="is--catalog"
+					]]
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

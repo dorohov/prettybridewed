@@ -1,0 +1,59 @@
+.include-custom-font(
+	@family: @stem, 
+	@src-name: @stem, 
+	@weight: normal, 
+	@style: normal
+	){
+	@font-face{			
+		font-family: "@{family}";			
+		src:	url('@{url-path-fonts}/@{src-name}.woff2') format('woff2'),
+				url('@{url-path-fonts}/@{src-name}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-icon(@family: @icon, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src: url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+
+.include-custom-font(
+	@family: @agava,
+	@src-name: @agava,
+	@weight: 400, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @agava,
+	@src-name: @agava-italic,
+	@weight: 400, 
+	@style: italic
+	);
+.include-custom-font(
+	@family: @agava,
+	@src-name: @agava-bold,
+	@weight: 700, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @regal,
+	@src-name: @regal-bold,
+	@weight: 400, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @regal,
+	@src-name: @regal-bold,
+	@weight: 700, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @bikham,
+	@src-name: @bikham,
+	@weight: 400, 
+	@style: normal
+	);

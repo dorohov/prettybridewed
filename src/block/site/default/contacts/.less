@@ -1,0 +1,120 @@
+.contacts-panel__{
+	/*&panel{		
+		background: linear-gradient(to bottom, @white 0%,@white 50%,#f7f7f7 50%,#f7f7f7 100%);
+		@media @media-device {
+			padding-top: @panel-gutter-device;
+			padding-bottom: @panel-gutter-device;
+		}
+		@media @media-screen {
+			padding-top: @panel-gutter-screen;
+			padding-bottom: @panel-gutter-screen;
+		}
+	} */
+	&block{
+		position: relative;
+		z-index: 2;
+		@media @media-screen {
+			//margin-left: 7vw;
+		}
+	}
+	&row{
+		//align-items: center;
+		&.is--gutter{
+			@media @media-size-xs {
+				margin-top: -10px;
+				& > .cols{
+					padding-top: 10px;
+				}
+			}
+		}
+		/*@media @media-screen {
+			justify-content: space-between;
+		}*/
+	}
+	&cols{
+		&.is--contacts{
+			@media @media-size-xs {				
+				.makeCols(12, 12);
+			}
+			@media @media-screen {				
+				.makeCols(4, 12);
+				.makeColsOffset(1, 12);
+			}
+			@media @media-size-mdl {			
+				.makeCols(5, 12);
+				.makeColsOffset(1, 12);
+			}
+		}
+		&.is--form{
+			@media @media-device {				
+				.makeCols(12, 12);
+			}
+			@media @media-screen {				
+				.makeCols(7, 12); 
+			}
+			@media @media-size-mdl {				
+				.makeCols(6, 12);
+			}
+		}
+	}
+	&soc-row{
+		@media @media-size-xs {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+		@media @media-size-xxl {
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+	}
+	&soc-cols{
+		@media @media-size-xs {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		@media @media-size-xxl {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+	&item{
+		@media @media-device {
+			margin-bottom: 25px;
+			&.is--soc{
+				padding-top: 15px;
+			}
+		}
+		@media @media-size-sm {
+			margin-bottom: 35px;
+		}
+		@media @media-screen {
+			margin-bottom: 2.3vw;
+			&.is--soc{
+				padding-top: 1.5vw;
+			}
+		}
+		@media @media-size-md {margin-bottom: 3vw;}
+	}
+	&item-icon{
+		width: 55px;
+		height: 55px;
+		position: absolute;
+		top: 50%;
+		left: 0px;
+		transform: translateY(-50%);
+	}
+	&item-head{
+		color: @blue;
+		font-weight: 700;
+	}
+	&map{
+		@media @media-device {padding-top: 25px}
+		@media @media-screen {padding-top: 2vw;}
+	}
+	&map-item{
+		//box-shadow: 0px 18px 24px 0px rgba(0, 0, 0, 0.07);
+		@media @media-size-xs-p {height: 350px;}
+		@media @media-size-xs-l {height: 300px;}
+		@media @media-notsmart {height: 500px;}
+	}
+}

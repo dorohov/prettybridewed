@@ -1,0 +1,47 @@
+.advantages-panel__{
+	&block{
+		@media @media-device {
+			padding-top: @panel-gutter-device;
+			padding-bottom: @panel-gutter-device;
+		}
+		@media @media-screen {
+			padding-top: @panel-gutter-screen;
+			padding-bottom: @panel-gutter-screen;
+		}
+	}
+	&row{}
+	&cols{
+		&.is--cols-3{
+			@media @media-size-xs-p{.makeCols(6, 12);}
+			@media @media-size-xxxs {.makeCols(12, 12);}
+			@media @media-size-xs-l{.makeCols(3, 12);}
+			@media @media-size-xxs-l {.makeCols(6, 12);}
+			//@media @media-size-sm-p{.makeCols(6, 12);}
+		}
+	}
+	&item{
+		text-align: center;
+	}
+	&preview{
+		margin: 0 auto 15px;
+		@media @media-device{
+			width: 140px;
+			height: 140px;
+		}
+		@media @media-screen{
+			width: 190px;
+			height: 190px;			
+		}
+	}
+	&note{
+		@media @media-device{
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 6;
+			br {display: none}
+		}
+		@media @media-screen {			
+			.calcFontSize(18, 22, 320, 1680);
+			.calcLineHeight(22, 30, 320, 1680); 
+		}
+	}
+}
